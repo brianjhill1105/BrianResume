@@ -548,6 +548,16 @@ h1, h2, h3, h4 {
   z-index: 1;
 }
 
+.about__photo-img {
+  position: absolute;
+  inset: 4px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 1;
+}
+
 .about__bio {
   font-size: 1.05rem;
   color: var(--color-text);

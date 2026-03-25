@@ -260,12 +260,12 @@
     // If user prefers reduced motion, show the first phrase statically
     // and skip the typing animation entirely.
     if (prefersReducedMotion) {
-      typedEl.textContent = 'Tech Leader.';
+      typedEl.textContent = 'Web Producer.';
     } else {
       const phrases = [
-        'Tech Leader.',
-        'AI Expert.',
         'Web Producer.',
+        'AI Expert.',
+        'Tech Leader.',
       ];
       let phraseIndex = 0;
       let charIndex = 0;
