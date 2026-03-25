@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Brian Hill — Tech Leader, AI Enthusiast, Web Producer. 15+ years turning complex technology into seamless experiences.">
+  <meta name="author" content="Brian Hill">
+  <title>Brian Hill — Associate Web Producer (AI-Assisted)</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo" aria-label="Brian Hill — Home">BH</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+      </button>
+      <ul class="nav__links" id="nav-links" role="list">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#philosophy" class="nav__link">Philosophy</a></li>
+        <li><a href="#why-me" class="nav__link">Why Me</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="hero" id="hero">
+    <canvas class="hero__canvas" id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero__content">
+      <h1 class="hero__name">Brian Hill</h1>
+      <p class="hero__tagline">
+        <span class="hero__typed" id="typed-text"></span>
+        <span class="hero__cursor" aria-hidden="true">|</span>
+      </p>
+      <p class="hero__subtitle">15+ years turning complex technology into seamless experiences&nbsp;&mdash; now bringing that expertise to web production.</p>
+      <a href="#why-me" class="hero__cta">See Why I'm Your Next Web Producer</a>
+    </div>
+    <div class="hero__scroll-indicator" aria-hidden="true">
+      <span class="hero__scroll-arrow"></span>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ABOUT
+       ============================================ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <h2 class="section__heading animate-on-scroll">About Me</h2>
+      <div class="about__grid">
+        <div class="about__photo-wrapper animate-on-scroll">
+          <div class="about__photo">
+            <span class="about__photo-initials">BH</span>
+          </div>
+        </div>
+        <div class="about__text animate-on-scroll">
+          <p class="about__bio">
+            I've spent over 15 years at the intersection of technology and people&nbsp;&mdash; from the Apple Store floor to the IT Director's office. My career has been defined by one thing: taking complex tech and making it work beautifully for real humans. Now I'm channeling that same energy into web production, using AI-assisted tools to build fast, polished digital experiences. This website? Built with AI. Because the best way to show you what I can do is to just do it.
+          </p>
+          <ul class="about__details" role="list">
+            <li class="about__detail">
+              <svg class="about__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Ponchatoula, Louisiana <span class="about__highlight">(local to Hammond!)</span>
+            </li>
+            <li class="about__detail">
+              <svg class="about__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+              <a href="mailto:brianjhill@me.com" class="about__link">brianjhill@me.com</a>
+            </li>
+            <li class="about__detail">
+              <svg class="about__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              <a href="https://www.linkedin.com/in/brianjhill/" class="about__link" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       EXPERIENCE — Interactive Timeline
+       ============================================ -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <h2 class="section__heading animate-on-scroll">Experience</h2>
+      <div class="timeline">
+
+        <!-- 1. Hood Memorial Hospital -->
+        <div class="timeline__item animate-on-scroll" data-direction="left">
+          <div class="timeline__dot" aria-hidden="true"></div>
+          <div class="timeline__card">
+            <div class="timeline__icon" style="--icon-color: #0ea5e9" aria-hidden="true">H</div>
+            <div class="timeline__body">
+              <h3 class="timeline__title">Director of IT</h3>
+              <p class="timeline__company">Hood Memorial Hospital</p>
+              <p class="timeline__meta">Mar 2023 &ndash; Present &middot; Amite, LA</p>
+              <p class="timeline__desc">Lead IT strategy and digital transformation for a healthcare organization. Manage infrastructure, cybersecurity, and vendor relationships while driving innovation across departments.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. North Oaks Health System -->
+        <div class="timeline__item animate-on-scroll" data-direction="right">
+          <div class="timeline__dot" aria-hidden="true"></div>
+          <div class="timeline__card">
+            <div class="timeline__icon" style="--icon-color: #8b5cf6" aria-hidden="true">N</div>
+            <div class="timeline__body">
+              <h3 class="timeline__title">IT Service Desk Analyst II</h3>
+              <p class="timeline__company">North Oaks Health System</p>
+              <p class="timeline__meta">Apr 2021 &ndash; Mar 2023 &middot; Hammond, LA</p>
+              <p class="timeline__desc">Delivered technical support across enterprise systems. Streamlined workflows and improved response times through process optimization and clear communication.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Globalstar -->
+        <div class="timeline__item animate-on-scroll" data-direction="left">
+          <div class="timeline__dot" aria-hidden="true"></div>
+          <div class="timeline__card">
+            <div class="timeline__icon" style="--icon-color: #06b6d4" aria-hidden="true">G</div>
+            <div class="timeline__body">
+              <h3 class="timeline__title">Technical Support Specialist</h3>
+              <p class="timeline__company">Globalstar</p>
+              <p class="timeline__meta">Jun 2020 &ndash; Apr 2021 &middot; Covington, LA</p>
+              <p class="timeline__desc">Provided expert-level support for satellite communications technology. Translated complex technical issues into clear solutions for diverse users.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. AT&T -->
+        <div class="timeline__item animate-on-scroll" data-direction="right">
+          <div class="timeline__dot" aria-hidden="true"></div>
+          <div class="timeline__card">
+            <div class="timeline__icon" style="--icon-color: #3b82f6" aria-hidden="true">AT</div>
+            <div class="timeline__body">
+              <h3 class="timeline__title">Integrated Solutions Consultant</h3>
+              <p class="timeline__company">AT&amp;T</p>
+              <p class="timeline__meta">Dec 2018 &ndash; Feb 2020 &middot; Covington, LA</p>
+              <p class="timeline__desc">Designed custom technology solutions for business clients. Combined sales expertise with deep technical knowledge to deliver integrated communication systems.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Apple (Decade of Experience) -->
+        <div class="timeline__item animate-on-scroll" data-direction="left">
+          <div class="timeline__dot" aria-hidden="true"></div>
+          <div class="timeline__card">
+            <div class="timeline__icon timeline__icon--apple" style="--icon-color: #a855f7" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            </div>
+            <div class="timeline__body">
+              <h3 class="timeline__title">Apple Expert &rarr; Apple Solutions Consultant</h3>
+              <p class="timeline__company">Apple &amp; Best Buy (Apple Division)</p>
+              <p class="timeline__meta">Aug 2008 &ndash; Jun 2018 &middot; <strong>A Decade in the Apple Ecosystem</strong> &middot; Covington, LA</p>
+              <p class="timeline__desc">Spent a decade immersed in the Apple ecosystem — starting as an Apple Expert at Best Buy and advancing to Apple Solutions Consultant at Apple. Helped businesses integrate Apple technology into their workflows, developed deep expertise in UX thinking, design principles, and customer-centric solutions. This is where I built my eye for design and my instinct for what makes technology feel effortless.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SKILLS
+       ============================================ -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <h2 class="section__heading animate-on-scroll">Skills</h2>
+      <div class="skills__grid">
+
+        <!-- AI & Automation -->
+        <div class="skills__card animate-on-scroll">
+          <div class="skills__card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 014 4c0 1.1-.9 2-2 2h-4a2 2 0 01-2-2 4 4 0 014-4z"/><path d="M8.5 8l-1 1.5A6 6 0 006 14c0 3.3 2.7 6 6 6s6-2.7 6-6a6 6 0 00-1.5-4.5L15.5 8"/><circle cx="12" cy="14" r="2"/><path d="M12 12v-2M10.5 15.5l-1.5 1M13.5 15.5l1.5 1"/></svg>
+          </div>
+          <h3 class="skills__card-title">AI &amp; Automation</h3>
+          <ul class="skills__card-list" role="list">
+            <li>AI-Assisted Development</li>
+            <li>Prompt Engineering</li>
+            <li>Workflow Automation</li>
+          </ul>
+        </div>
+
+        <!-- Web Technologies -->
+        <div class="skills__card animate-on-scroll">
+          <div class="skills__card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
+          </div>
+          <h3 class="skills__card-title">Web Technologies</h3>
+          <ul class="skills__card-list" role="list">
+            <li>HTML &amp; CSS</li>
+            <li>Responsive Design</li>
+            <li>No-Code Tools</li>
+          </ul>
+        </div>
+
+        <!-- IT Infrastructure -->
+        <div class="skills__card animate-on-scroll">
+          <div class="skills__card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><circle cx="6" cy="6" r="1"/><circle cx="6" cy="18" r="1"/><line x1="10" y1="6" x2="18" y2="6"/><line x1="10" y1="18" x2="18" y2="18"/></svg>
+          </div>
+          <h3 class="skills__card-title">IT Infrastructure</h3>
+          <ul class="skills__card-list" role="list">
+            <li>Network Management</li>
+            <li>Cloud Solutions</li>
+            <li>System Integration</li>
+          </ul>
+        </div>
+
+        <!-- Design Sensibility -->
+        <div class="skills__card animate-on-scroll">
+          <div class="skills__card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20"/><path d="M2 12h20"/><path d="M12 2c2.5 3.5 3.8 7.5 3.8 10s-1.3 6.5-3.8 10"/><path d="M12 2c-2.5 3.5-3.8 7.5-3.8 10s1.3 6.5 3.8 10"/></svg>
+          </div>
+          <h3 class="skills__card-title">Design Sensibility</h3>
+          <ul class="skills__card-list" role="list">
+            <li>UX Thinking</li>
+            <li>Layout &amp; Composition</li>
+            <li>Brand Consistency</li>
+          </ul>
+          <p class="skills__card-note">from a decade at Apple</p>
+        </div>
+
+        <!-- Communication -->
+        <div class="skills__card animate-on-scroll">
+          <div class="skills__card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="13" y2="13"/></svg>
+          </div>
+          <h3 class="skills__card-title">Communication</h3>
+          <ul class="skills__card-list" role="list">
+            <li>Client Consulting</li>
+            <li>Technical Translation</li>
+            <li>Team Leadership</li>
+          </ul>
+        </div>
+
+        <!-- Problem Solving -->
+        <div class="skills__card animate-on-scroll">
+          <div class="skills__card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/><line x1="11" y1="8" x2="11" y2="14"/></svg>
+          </div>
+          <h3 class="skills__card-title">Problem Solving</h3>
+          <ul class="skills__card-list" role="list">
+            <li>Troubleshooting</li>
+            <li>Process Optimization</li>
+            <li>Digital Transformation</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       HOW I WORK — Philosophy / Rules
+       ============================================ -->
+  <section class="section philosophy" id="philosophy">
+    <div class="container">
+      <h2 class="section__heading animate-on-scroll">How I Work</h2>
+      <p class="philosophy__intro animate-on-scroll">These are the principles I live by — the rules I hold myself and my teams to every single day. Click any rule to learn more.</p>
+      <div class="philosophy__grid">
+
+        <div class="philosophy__card philosophy__card--featured animate-on-scroll" role="button" tabindex="0" aria-expanded="false">
+          <div class="philosophy__header">
+            <span class="philosophy__number" aria-hidden="true">01</span>
+            <p class="philosophy__text">Deliver 100%, 100% of the time</p>
+            <span class="philosophy__chevron" aria-hidden="true"></span>
+          </div>
+          <div class="philosophy__detail">
+            <p>There's no "good enough." Every project, every deliverable, every interaction gets my full effort. Whether it's a client website or an internal system update, I treat it like it's the most important thing on my plate — because to someone, it is. Half-measures create twice the work.</p>
+          </div>
+        </div>
+
+        <div class="philosophy__card animate-on-scroll" role="button" tabindex="0" aria-expanded="false">
+          <div class="philosophy__header">
+            <span class="philosophy__number" aria-hidden="true">02</span>
+            <p class="philosophy__text">Complacency kills</p>
+            <span class="philosophy__chevron" aria-hidden="true"></span>
+          </div>
+          <div class="philosophy__detail">
+            <p>The moment you stop pushing to improve is the moment you start falling behind. I never assume the way we've always done it is the best way. Technology moves fast, and so should we. Staying comfortable is the biggest risk.</p>
+          </div>
+        </div>
+
+        <div class="philosophy__card animate-on-scroll" role="button" tabindex="0" aria-expanded="false">
+          <div class="philosophy__header">
+            <span class="philosophy__number" aria-hidden="true">03</span>
+            <p class="philosophy__text">Be a leader. Take care of our mission and our users always</p>
+            <span class="philosophy__chevron" aria-hidden="true"></span>
+          </div>
+          <div class="philosophy__detail">
+            <p>Leadership isn't a title — it's a behavior. Every decision I make comes back to one question: does this serve the people who depend on us? In web production, that means real clients and their customers. The mission and the user experience always come first.</p>
+          </div>
+        </div>
+
+        <div class="philosophy__card animate-on-scroll" role="button" tabindex="0" aria-expanded="false">
+          <div class="philosophy__header">
+            <span class="philosophy__number" aria-hidden="true">04</span>
+            <p class="philosophy__text">The highest level of integrity is expected — when in doubt, ask</p>
+            <span class="philosophy__chevron" aria-hidden="true"></span>
+          </div>
+          <div class="philosophy__detail">
+            <p>Do the right thing, even when no one is watching. And if you're not sure what the right thing is? Ask. There's no shame in seeking clarity — the only mistake is guessing when you don't have to. Transparency builds trust.</p>
+          </div>
+        </div>
+
+        <div class="philosophy__card animate-on-scroll" role="button" tabindex="0" aria-expanded="false">
+          <div class="philosophy__header">
+            <span class="philosophy__number" aria-hidden="true">05</span>
+            <p class="philosophy__text">Always tell the truth. We want to hear the bad news sooner than later</p>
+            <span class="philosophy__chevron" aria-hidden="true"></span>
+          </div>
+          <div class="philosophy__detail">
+            <p>Problems don't age well. A small issue today becomes a crisis tomorrow if you hide it. I create environments where people feel safe bringing problems forward early, because that's when they're easiest to fix. Honesty isn't just a value — it's a strategy.</p>
+          </div>
+        </div>
+
+        <div class="philosophy__card animate-on-scroll" role="button" tabindex="0" aria-expanded="false">
+          <div class="philosophy__header">
+            <span class="philosophy__number" aria-hidden="true">06</span>
+            <p class="philosophy__text">Understand the business, not just the technology</p>
+            <span class="philosophy__chevron" aria-hidden="true"></span>
+          </div>
+          <div class="philosophy__detail">
+            <p>Technology is a tool, not the goal. I always start by understanding what the business needs to accomplish, then figure out how tech can get us there. A perfectly configured system that doesn't serve the business is just an expensive hobby.</p>
+          </div>
+        </div>
+
+        <div class="philosophy__card animate-on-scroll" role="button" tabindex="0" aria-expanded="false">
+          <div class="philosophy__header">
+            <span class="philosophy__number" aria-hidden="true">07</span>
+            <p class="philosophy__text">Have a well-founded opinion</p>
+            <span class="philosophy__chevron" aria-hidden="true"></span>
+          </div>
+          <div class="philosophy__detail">
+            <p>Don't just go with the flow — do the research, weigh the options, and bring a point of view to the table. But "well-founded" is the key word. Opinions backed by experience and data move teams forward. Opinions backed by ego hold them back.</p>
+          </div>
+        </div>
+
+        <div class="philosophy__card animate-on-scroll" role="button" tabindex="0" aria-expanded="false">
+          <div class="philosophy__header">
+            <span class="philosophy__number" aria-hidden="true">08</span>
+            <p class="philosophy__text">Be professional in your style, speech, and follow-up</p>
+            <span class="philosophy__chevron" aria-hidden="true"></span>
+          </div>
+          <div class="philosophy__detail">
+            <p>Details matter. How you present yourself, how you communicate, and whether you follow through — these things define your reputation. Professionalism isn't about being stiff; it's about being reliable, respectful, and intentional in everything you do.</p>
+          </div>
+        </div>
+
+        <div class="philosophy__card animate-on-scroll" role="button" tabindex="0" aria-expanded="false">
+          <div class="philosophy__header">
+            <span class="philosophy__number" aria-hidden="true">09</span>
+            <p class="philosophy__text">See the world through the eyes of our users</p>
+            <span class="philosophy__chevron" aria-hidden="true"></span>
+          </div>
+          <div class="philosophy__detail">
+            <p>Empathy is a superpower in tech. Whether building a website or deploying a system, I always ask: what does this feel like for the person using it? A decade at Apple drilled this into me — the best technology disappears into the experience.</p>
+          </div>
+        </div>
+
+        <div class="philosophy__card animate-on-scroll" role="button" tabindex="0" aria-expanded="false">
+          <div class="philosophy__header">
+            <span class="philosophy__number" aria-hidden="true">10</span>
+            <p class="philosophy__text">Finish the back of the drawer</p>
+            <span class="philosophy__chevron" aria-hidden="true"></span>
+          </div>
+          <div class="philosophy__detail">
+            <p>A Steve Jobs philosophy that stuck with me. Even the parts no one will see should be done right. Quality isn't just what's visible — it's the craftsmanship in every detail. If the code behind a website is messy, it'll show eventually. Do it right, all the way through.</p>
+          </div>
+        </div>
+
+        <div class="philosophy__card animate-on-scroll" role="button" tabindex="0" aria-expanded="false">
+          <div class="philosophy__header">
+            <span class="philosophy__number" aria-hidden="true">11</span>
+            <p class="philosophy__text">Everyone sweeps the floor</p>
+            <span class="philosophy__chevron" aria-hidden="true"></span>
+          </div>
+          <div class="philosophy__detail">
+            <p>No task is beneath anyone. I've been a Director and I've crawled under desks to run cables. Titles don't excuse you from the work that needs doing. The best teams are built when leaders roll up their sleeves alongside everyone else.</p>
+          </div>
+        </div>
+
+        <div class="philosophy__card animate-on-scroll" role="button" tabindex="0" aria-expanded="false">
+          <div class="philosophy__header">
+            <span class="philosophy__number" aria-hidden="true">12</span>
+            <p class="philosophy__text">Don't take yourself too seriously. Have fun — otherwise it's not worth it</p>
+            <span class="philosophy__chevron" aria-hidden="true"></span>
+          </div>
+          <div class="philosophy__detail">
+            <p>Work hard, yes — but enjoy what you do. The best creative work comes from teams that laugh together, celebrate wins, and don't let the pressure steal the joy. Life's too short for a job that doesn't light you up.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       WHY ME
+       ============================================ -->
+  <section class="section why-me" id="why-me">
+    <div class="container">
+      <h2 class="section__heading animate-on-scroll">Why Me</h2>
+      <p class="why-me__intro animate-on-scroll">Here's how my experience maps directly to what Anntoine Marketing + Design is looking for.</p>
+      <div class="why-me__grid">
+
+        <div class="why-me__row animate-on-scroll">
+          <div class="why-me__want">
+            <span class="why-me__label">What You Want</span>
+            <h3>AI Expert</h3>
+          </div>
+          <div class="why-me__bring">
+            <span class="why-me__label">What I Bring</span>
+            <p>I don't just use AI&nbsp;&mdash; I built this entire website with it. I actively integrate AI tools into my daily workflow as an IT Director.</p>
+          </div>
+        </div>
+
+        <div class="why-me__row animate-on-scroll">
+          <div class="why-me__want">
+            <span class="why-me__label">What You Want</span>
+            <h3>Hybrid Mindset</h3>
+          </div>
+          <div class="why-me__bring">
+            <span class="why-me__label">What I Bring</span>
+            <p>15+ years of hands-on tech experience means I understand how systems are built. I can spot what AI gets wrong and fix it.</p>
+          </div>
+        </div>
+
+        <div class="why-me__row animate-on-scroll">
+          <div class="why-me__want">
+            <span class="why-me__label">What You Want</span>
+            <h3>Efficiency Expert</h3>
+          </div>
+          <div class="why-me__bring">
+            <span class="why-me__label">What I Bring</span>
+            <p>From zero to launched? That's literally what I do&nbsp;&mdash; I took Hood Memorial's IT department from legacy systems to modern infrastructure.</p>
+          </div>
+        </div>
+
+        <div class="why-me__row animate-on-scroll">
+          <div class="why-me__want">
+            <span class="why-me__label">What You Want</span>
+            <h3>Design Instincts</h3>
+          </div>
+          <div class="why-me__bring">
+            <span class="why-me__label">What I Bring</span>
+            <p>A decade at Apple taught me that design isn't decoration&nbsp;&mdash; it's how things work. I know when a layout is "off."</p>
+          </div>
+        </div>
+
+        <div class="why-me__row animate-on-scroll">
+          <div class="why-me__want">
+            <span class="why-me__label">What You Want</span>
+            <h3>Communication</h3>
+          </div>
+          <div class="why-me__bring">
+            <span class="why-me__label">What I Bring</span>
+            <p>My entire career is translating between technical and human. Client brief to AI prompt? That's my superpower.</p>
+          </div>
+        </div>
+
+        <div class="why-me__row animate-on-scroll">
+          <div class="why-me__want">
+            <span class="why-me__label">What You Want</span>
+            <h3>Values Match</h3>
+          </div>
+          <div class="why-me__bring">
+            <span class="why-me__label">What I Bring</span>
+            <p>Honesty, Integrity, Kindness, Excellence&nbsp;&mdash; these aren't just words on a wall to me. They're how I've built every team I've led.</p>
+          </div>
+        </div>
+
+        <div class="why-me__row animate-on-scroll">
+          <div class="why-me__want">
+            <span class="why-me__label">What You Want</span>
+            <h3>Local to Hammond</h3>
+          </div>
+          <div class="why-me__bring">
+            <span class="why-me__label">What I Bring</span>
+            <p>I'm in Ponchatoula — just minutes from Hammond. No relocation needed.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       EDUCATION
+       ============================================ -->
+  <section class="section education" id="education">
+    <div class="container">
+      <h2 class="section__heading animate-on-scroll">Education</h2>
+      <div class="education__card animate-on-scroll">
+        <div class="education__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
+        </div>
+        <div class="education__body">
+          <h3 class="education__school">Southeastern Louisiana University</h3>
+          <p class="education__degree">Business Administration and Management</p>
+          <p class="education__note">Go Lions! &#x1F981; <span class="education__aside">&mdash; they're in Hammond, too</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTACT / CTA
+       ============================================ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <h2 class="contact__heading animate-on-scroll">Let's Build Something Together</h2>
+      <p class="contact__subtext animate-on-scroll">I'm ready to bring my tech leadership, AI expertise, and design instincts to the Anntoine team.</p>
+      <div class="contact__links animate-on-scroll">
+        <a href="mailto:brianjhill@me.com" class="contact__btn contact__btn--primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+          brianjhill@me.com
+        </a>
+        <a href="https://www.linkedin.com/in/brianjhill/" class="contact__btn contact__btn--secondary" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
+      <p class="contact__proof animate-on-scroll">This website was designed and built using AI-assisted tools&nbsp;&mdash; proof of concept, delivered. &#x26A1;</p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__copy">&copy; 2026 Brian Hill</p>
+      <p class="footer__note">Built with AI-assisted development tools</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
