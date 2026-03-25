@@ -6,7 +6,6 @@
   --color-bg:          #0b0f19;
   --color-bg-alt:      #111827;
   --color-surface:     #1e293b;
-  --color-surface-alt: #334155;
   --color-text:        #e2e8f0;
   --color-text-muted:  #94a3b8;
   --color-text-dim:    #64748b;
@@ -52,6 +51,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--nav-height);
   -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -83,11 +83,48 @@ h1, h2, h3, h4 {
   font-family: var(--font-heading);
   line-height: 1.2;
   font-weight: 700;
+  text-wrap: balance;
 }
 
 ::selection {
   background: var(--color-accent-2);
   color: var(--color-white);
+}
+
+/* ============================================
+   SKIP LINK (Accessibility)
+   ============================================ */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 10000;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-accent-1);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ============================================
+   FOCUS STYLES (Accessibility)
+   ============================================ */
+:focus-visible {
+  outline: 2px solid var(--color-accent-1);
+  outline-offset: 2px;
+}
+
+/* Remove default outline when :focus-visible is supported */
+:focus:not(:focus-visible) {
+  outline: none;
 }
 
 /* ============================================
@@ -104,6 +141,7 @@ h1, h2, h3, h4 {
   padding-top: var(--section-pad-y);
   padding-bottom: var(--section-pad-y);
   position: relative;
+  contain: layout style;
 }
 
 .section__heading {
@@ -123,11 +161,13 @@ h1, h2, h3, h4 {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+  will-change: opacity, transform;
 }
 
 .animate-on-scroll.visible {
   opacity: 1;
   transform: translateY(0);
+  will-change: auto;
 }
 
 /* Stagger children */
@@ -181,7 +221,8 @@ h1, h2, h3, h4 {
   transition: opacity var(--transition-base);
 }
 
-.nav__logo:hover {
+.nav__logo:hover,
+.nav__logo:focus-visible {
   opacity: 0.8;
 }
 
@@ -197,6 +238,10 @@ h1, h2, h3, h4 {
   color: var(--color-text-muted);
   position: relative;
   transition: color var(--transition-base);
+}
+
+.nav__link:focus-visible {
+  color: var(--color-white);
 }
 
 .nav__link::after {
@@ -313,6 +358,8 @@ h1, h2, h3, h4 {
   height: 100%;
   z-index: 0;
   pointer-events: none;
+  contain: strict;
+  will-change: contents;
 }
 
 .hero__content {
@@ -331,6 +378,7 @@ h1, h2, h3, h4 {
   -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;
   animation: hero-name-in 1s var(--ease-out) both;
+  will-change: opacity, transform;
 }
 
 @keyframes hero-name-in {
@@ -405,9 +453,14 @@ h1, h2, h3, h4 {
   box-shadow: 0 4px 24px rgba(14, 165, 233, 0.25);
 }
 
-.hero__cta:hover {
+.hero__cta:hover,
+.hero__cta:focus-visible {
   transform: translateY(-2px) scale(1.03);
   box-shadow: 0 8px 40px rgba(14, 165, 233, 0.35);
+}
+
+.hero__cta:focus-visible {
+  outline-offset: 4px;
 }
 
 .hero__cta:active {
@@ -535,7 +588,8 @@ h1, h2, h3, h4 {
   border-bottom: 1px solid transparent;
 }
 
-.about__link:hover {
+.about__link:hover,
+.about__link:focus-visible {
   color: var(--color-accent-2);
   border-bottom-color: var(--color-accent-2);
 }
@@ -610,6 +664,8 @@ h1, h2, h3, h4 {
   height: 48px;
   min-width: 48px;
   border-radius: var(--radius-sm);
+  /* Fallback for browsers without color-mix() */
+  background: rgba(14, 165, 233, 0.15);
   background: color-mix(in srgb, var(--icon-color, var(--color-accent-1)) 15%, transparent);
   color: var(--icon-color, var(--color-accent-1));
   display: flex;
@@ -619,6 +675,13 @@ h1, h2, h3, h4 {
   font-weight: 700;
   font-size: 1rem;
 }
+
+/* Timeline icon color variants (replacing inline styles for CSP compliance) */
+.timeline__icon--sky   { --icon-color: #0ea5e9; }
+.timeline__icon--violet { --icon-color: #8b5cf6; }
+.timeline__icon--cyan  { --icon-color: #06b6d4; }
+.timeline__icon--blue  { --icon-color: #3b82f6; }
+.timeline__icon--purple { --icon-color: #a855f7; }
 
 .timeline__icon--apple {
   font-size: 0;
@@ -799,13 +862,15 @@ h1, h2, h3, h4 {
   transition: opacity var(--transition-base);
 }
 
-.philosophy__card:hover {
+.philosophy__card:hover,
+.philosophy__card:focus-visible {
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
   border-color: rgba(14, 165, 233, 0.2);
 }
 
 .philosophy__card:hover::before,
+.philosophy__card:focus-visible::before,
 .philosophy__card.expanded::before {
   opacity: 1;
 }
@@ -1129,7 +1194,8 @@ h1, h2, h3, h4 {
   box-shadow: 0 4px 20px rgba(14, 165, 233, 0.25);
 }
 
-.contact__btn--primary:hover {
+.contact__btn--primary:hover,
+.contact__btn--primary:focus-visible {
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(14, 165, 233, 0.35);
 }
@@ -1140,7 +1206,8 @@ h1, h2, h3, h4 {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.contact__btn--secondary:hover {
+.contact__btn--secondary:hover,
+.contact__btn--secondary:focus-visible {
   transform: translateY(-2px);
   border-color: rgba(14, 165, 233, 0.3);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
@@ -1196,7 +1263,8 @@ h1, h2, h3, h4 {
   .hero__canvas,
   .hero__scroll-indicator,
   .hero__cta,
-  .nav__hamburger {
+  .nav__hamburger,
+  .skip-link {
     display: none !important;
   }
 
@@ -1221,6 +1289,7 @@ h1, h2, h3, h4 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     page-break-inside: avoid;
+    break-inside: avoid;
   }
 
   .section__heading {
@@ -1244,16 +1313,19 @@ h1, h2, h3, h4 {
   .timeline__card {
     border: 1px solid #ddd;
     page-break-inside: avoid;
+    break-inside: avoid;
   }
 
   .skills__card {
     border: 1px solid #ddd;
     page-break-inside: avoid;
+    break-inside: avoid;
   }
 
   .why-me__row {
     border: 1px solid #ddd;
     page-break-inside: avoid;
+    break-inside: avoid;
   }
 
   .contact::before,
@@ -1292,5 +1364,14 @@ h1, h2, h3, h4 {
   .animate-on-scroll {
     opacity: 1;
     transform: none;
+    will-change: auto;
+  }
+
+  .hero__canvas {
+    will-change: auto;
+  }
+
+  .hero__name {
+    will-change: auto;
   }
 }
